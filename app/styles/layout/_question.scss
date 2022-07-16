@@ -1,0 +1,100 @@
+.question{
+    min-height: 30rem;
+    padding: 10rem;
+    &-column{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+    &-img{
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+    }
+    &-icon{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        background-color: #fff4f5;
+        color: $pink-dark-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4.8rem;
+        margin-bottom: 4rem;
+    }
+    &-title{
+        font-family: $primary-font;
+        font-size: 6rem;
+        font-weight: 700;
+        margin-bottom: 4rem;
+    }
+    &-desc{
+        font-family: $second-font;
+        font-size: 1.8rem;
+        color: #747474;
+        font-weight: 400;
+        margin-bottom: 5.6rem;
+    }
+    &-item{
+        &:nth-child(2){
+            color: #747474;
+        }
+        &__header{
+            font-family: $second-font;
+            color:$pink-dark-color;
+            font-size: 2.4rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 3.5rem;
+        }
+        &__text{
+            font-family: $second-font;
+            color: #747474;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+        &__content{
+            display: none;
+        }
+        .active{
+            margin-top: -1.8rem;
+            display: block;
+            margin-bottom: 3.5rem;
+        }
+    }
+    @media screen and (max-width:1023px) {
+        &-column{
+            display: block;
+        }
+    }
+    @media screen and (max-width:767px) {
+        padding: 5rem;
+        &-column{
+            display: block;
+        }
+        &-img{
+            display: none;
+        }
+        &-icon{
+            width:7rem;
+            height:7rem;
+            font-size: 2.4rem;
+        }
+        &-title{
+            font-size: 5rem;
+        }
+        &-desc{
+            font-size: 1.5rem;
+        }
+        &-item{
+            &__header{
+                font-size: 2.3rem;
+            }
+            &__text{
+                font-size: 1.3rem;
+                line-height: 1.3;
+            }
+        }
+    }
+}

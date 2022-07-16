@@ -1,0 +1,107 @@
+.app{
+    &-column{
+        padding-right: 10rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 3rem;
+    }
+    &-img{
+        width: 100%;
+        min-height: 100%;
+    }
+    &-icon{
+        width: 10rem;
+        height: 10rem;
+    }
+    &-title{
+        font-size: 6rem;
+        font-weight: 700;
+        font-family: $primary-font;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    &-desc{
+        font-family: $second-font;
+        font-weight: 400;
+        color: #8c8c8c;
+        margin-bottom: 3rem;
+        line-height: 1.3;
+        font-size: 1.8rem;
+    }
+    &-list{
+        list-style: none;
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+    }
+    &-text{
+        color: black;
+        font-size: 1.8rem;
+        font-family: $second-font;
+        font-weight: 400;
+        &::before {
+            content: "•";
+            color: $pink-dark-color;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 2rem;
+            margin-right: 1rem;
+            }
+        &:nth-child(2){
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+    &-link{
+        color: white;
+            width: 20rem;
+            height: 7rem;
+            border: 1px solid $third-color;
+            background-color: $third-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+            font-family: $primary-font;
+            font-weight: 500;
+            font-size: 1.8rem;
+    }
+    @media screen and (max-width:1023px){
+        &-column{
+            display: block;
+            padding: 10rem;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+        &-title{
+            font-size: 5rem;
+        }
+        &-desc{
+            font-size: 1.5rem;
+        }
+        &-text{
+            font-size: 1.5rem;
+        }
+    }
+    @media screen and (max-width:767px){
+        &-column{
+            padding: 5rem;
+        }
+        &-content{
+            position: relative;
+        }
+        &-icon{
+            width: 7rem;
+            height: 7rem;
+        }
+        &-link{
+            font-size: 1.5rem;
+            width: 15rem;
+            height: 6rem;
+            position: absolute;
+            top:115%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.lucky{
+    padding: 10rem;
+    width: 100%;
+    &-title{
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 6rem;
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+    &-desc{
+        font-family: $second-font;
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: #666666;
+        padding: 0 30rem;
+        text-align: center;
+        margin-bottom: 3.2rem;
+    }
+    &-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-link{
+        font-family: $primary-font;
+        font-weight: 500;
+        font-size: 1.8rem;
+        color: white;
+            width: 20rem;
+            height: 7rem;
+            border: 1px solid $third-color;
+            background-color: $third-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+    }
+    @media screen and (max-width:1023px){
+        &-desc{
+            padding: 0;
+        }
+    }
+    @media screen and (max-width:767px){
+        padding: 5rem;
+        &-desc{
+            padding: 0;
+            font-size: 1.5rem;
+        }
+        &-title{
+            font-size: 5rem;
+        }
+        &-link{
+        font-size: 1.5rem;
+        width: 15rem;
+        height: 6rem;
+        }
+    }
+}

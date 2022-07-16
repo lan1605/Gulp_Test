@@ -1,0 +1,1 @@
+const accordion=document.querySelectorAll(".question-item__header");function handleClick(e){const c=e.target.nextElementSibling;c.classList.toggle("active")}[...accordion].forEach(e=>e.addEventListener("click",handleClick));

@@ -1,0 +1,48 @@
+.footer{
+    width: 100%;
+    padding: 4rem 0;
+    background-color: black;
+    color: white;
+    &-column{
+        padding: 0 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    &-list{
+        cursor: pointer;
+        font-size: 1.8rem;
+    }
+    &-social{
+        &:not(:first-child){
+            margin-left: 1.8rem;
+        }
+    }
+    &-copyright{
+        font-family: $primary-font;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    &-logo{
+        font-size: 3rem;
+        font-family: $second-font;
+        font-weight: 900;
+        line-height: 1.2;
+        color: white;
+    }
+    @media screen and (max-width:767px){
+        padding: 4rem 5rem;
+        &-column{
+            padding:0;
+            display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        }
+        &-logo{
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+mixin optionItem(src, title)
+	li.option-item 
+		img.option-icon(src=src)
+		.option-content 
+			h3.option-title=title 
+			p.option-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia quis molestiae nihil ipsam consectetur, eaque laudantium officiis, dicta odio eum officia. 
+mixin featureItem(icon, title, style)
+	li.feature-item
+		.feature-info
+			i(class=icon).feature-item__icon(style=style)
+			span.feature-item__title=title
+		p.feature-item__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem, officiis recusandae numquam, molestiae vero laborum optio.
+mixin questionItem(title)
+	.question-item 
+		h3.question-item__header=title 
+		.question-item__content 
+			.question-item__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus non et fugit cumque inventore saepe blanditiis natus dolorem, autem dolores ab at ullam eveniet sunt numquam quam facere facilis accusantium.
+mixin numberItem(title, desc)
+	.number-item
+		.number-title=title 
+		.number-desc=desc
+		

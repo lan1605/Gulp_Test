@@ -1,0 +1,97 @@
+.option{
+    padding: 10rem;
+    margin-top: 6rem;
+    &-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        
+    }
+    &-item{
+        margin: 2rem;
+        border: 1px solid transparent;
+        border-radius: 2rem;
+        box-shadow: rgba($color: #000000, $alpha: 0.1) 0px 3px 27px 9px;
+        height: 36rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 36rem;
+    }
+    &-icon{
+        width: 7rem;
+        height: 7rem;
+    }
+    &-content{
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: $second-font;
+    }
+    &-title{
+        font-size: 2.5rem;
+        font-family: $second-font;
+        font-weight: 600;
+        margin-bottom: 3.2rem ;
+        margin-top: 0.7rem;
+    }
+    &-text{
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-align: center;
+        color: #8c8c8c;
+    }
+    @media (min-width:768px) and (max-width:1023px){
+        &-item{
+            margin: 1rem;
+            height: 30rem;
+        }
+        &-icon{
+            width: 5rem;
+            height: 5rem;
+            
+        }
+        &-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+        }
+        &-text {
+            font-size: 1.5rem;
+        }
+    }
+    @media screen and (max-width:767px){
+        margin-top: 0;
+        padding: 5rem;
+        &-item{
+			width: 90%;
+			scroll-snap-align: center;
+            height: 30rem;
+		}
+        &-icon{
+            width: 5rem;
+            height: 5rem;
+        }
+        &-title{
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+        }
+        &-text{
+            font-size: 1.5rem;
+        }
+		&-list{
+            display: grid;
+			grid-auto-columns: 80%;
+			grid-auto-flow: column;
+			overflow-x: auto;
+			padding: 1rem;
+			scroll-snap-type: x mandatory;
+			scroll-snap-stop:always ;
+			@include hideScroll;
+		}
+    }
+}
